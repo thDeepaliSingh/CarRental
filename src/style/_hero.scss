@@ -1,0 +1,135 @@
+@import './global/color';
+@import './global/typography';
+
+
+.hero-section__container{
+    height: 97vh;
+    width: 100%;
+    position: relative;
+    background-color: $bg-gray;
+}
+
+.hero-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.hero-contant{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    @media(max-width: 800px){
+        justify-content: center;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        max-width: 50rem;
+        margin-top: 5rem;
+        z-index: 3;
+
+        @media (max-width: 800px){
+            align-items: center;
+            text-align: center;
+
+        }
+
+        h4{
+            font-size: $h4-size;
+            font-family: $text-font;
+            color: $text-black;
+        }
+        h1{
+            font-size: $h1-size;
+            font-family: $titles-font;
+            color: $text-black;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-block: 1rem 2.3rem;
+
+            .orange-text{
+                color: $text-orange;
+            }
+        }
+        p{
+            font-size: $p-size;
+            font-family: $text-font;
+            color: $text-gray;
+            line-height: 1.6;
+            margin-bottom: 4rem;
+        }
+
+        &__btn{
+            display: flex;
+            gap: 2rem;
+            font-size: $p-size;
+            font-family: $text-font;
+
+            @media (max-width: 450px){
+                flex-direction: column;
+            }
+
+            a{
+                color: white;
+                font-weight: 700;
+            }
+
+            &__book-ride,
+            &__learn-more{
+                padding: 1.8rem 3rem;
+                border: .3rem;
+                transition: all .3s ease-in-out;
+            }
+
+            &__book-ride{
+                background-color: $text-orange;
+                border: 2px solid $text-orange;
+                box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+
+                @media (max-width: 450px) {
+                    padding: 1.8rem 3rem;
+                }
+
+                &:hover{
+                    background-color: #fa4226;
+                    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 60%);
+                }
+            }
+
+            &__learn-more{
+                background-color: $text-black;
+                border: 2px solid $text-black;
+
+                &:hover{
+                    background-color: transparent;
+                    color: $text-black;
+                }
+            }
+        }
+
+
+    }
+
+    &__main-car{
+        position: absolute;
+        right: 0;
+        width: 65%;
+        margin-top: 5rem;
+        z-index: 2;
+
+        @media (max-width: 800px){
+            display: none;
+        }
+
+    }
+}
