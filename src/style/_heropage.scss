@@ -1,0 +1,53 @@
+@import './global/color';
+@import './global/typography';
+
+
+.hero-page{
+    height: 41rem;
+    width: 100%;
+    background-image: url(../assets/hero/heroes-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.92);
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 41rem;
+        width: 100%;
+        z-index: 999;
+        color: $text-black;
+
+        h3{
+            font-size: 3.6rem;
+            margin-bottom: .5rem;
+        }
+        p{
+            font-size: $p-size;
+            font-weight: 600;
+
+            a{
+                color: $text-black;
+                transition: color .3s ease-in-out;
+
+                &:hover{
+                    color: $text-orange;
+                }
+            }
+        }
+    }
+
+}

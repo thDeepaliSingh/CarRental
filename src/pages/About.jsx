@@ -1,10 +1,12 @@
 import React from 'react'
+import HeroPage from '../component/HeroPage'
+
 
 const About = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <HeroPage name = "About"/>
+    </>
   )
 }
 

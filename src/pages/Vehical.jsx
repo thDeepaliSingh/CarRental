@@ -1,10 +1,12 @@
 import React from 'react'
+import HeroPage from '../component/HeroPage'
 
 const Vehical = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <HeroPage name = "Vehical Model"/>
+    </>
+    
   )
 }
 
