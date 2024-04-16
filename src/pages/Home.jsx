@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../component/Hero'
-import Banner from './component/Banner'
+import Banner from '../component/Banner'
 
 
 const Home = () => {
