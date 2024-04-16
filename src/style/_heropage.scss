@@ -53,6 +53,54 @@
 }
 
 
+.banner-section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-block: 6rem;
+    margin-block: 8rem;
+    background-color: #2d2d2d;
+    text-align: center;
+    display: flex;
+
+    .banner-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: white;
+        text-align: center;
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            h1{
+                font-size: $h1-size;
+                line-height: 1.3;
+
+                @media (max-width: 550px) {
+                    font-size: $h2-size;;
+                }
+            }
+
+            p{
+                font-size: $h3-size;
+
+                @media (max-width: 550px) {
+                    font-size: 2rem;
+                }
+
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+
 .book-banner{
     display: flex;
     width: 100%;

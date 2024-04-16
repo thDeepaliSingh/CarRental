@@ -7,18 +7,20 @@ import About from './pages/About'
 // import OurTeam from './pages/OurTeam'
 // import Testimonial from './pages/Testimonial'
 // import Vehical from './pages/Vehical'
+import Footer from './component/Footer'
 
 const App = () => {
   return (
   
       <>
       <Navbar />
+      {/* <Home /> */}
       <About />
-      {/* <Home />
-      <Contact />
+      {/* <Contact />
       <OurTeam />
       <Testimonial />
-      <Vehical /> */}
+    <Vehical /> */}
+    <Footer/>
       </>
   
   )
