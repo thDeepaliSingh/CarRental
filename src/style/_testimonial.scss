@@ -1,0 +1,101 @@
+@import './global/color';
+@import './global/typography';
+
+.testimonial-section{
+    background-color: $bg-gray;
+    padding-block: 10rem;
+    color: $text-black;
+}
+
+.testimonial-container{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        max-width: 70rem;
+        margin-inline: auto;
+        text-align: center;
+
+        h4{
+            font-size: $h4-size;
+            font-family: $text-font;
+            font-weight: 500;
+        }
+        h2{
+            font-size: $h2-size;
+            margin-bottom: 1.4rem;
+        }
+        p{
+            font-size: $p-size;
+            color: $text-gray;
+            line-height: 1.4;
+            font-family: $text-font;
+        }
+
+    }
+}
+
+.all-testimonials{
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+        padding: 0;
+    }
+
+    @media (max-width: 700px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box{
+        background-color: $bg-white;
+        width: 54rem;
+        padding: 5.5rem;
+        position: relative;
+        box-shadow: 0 20px 40px 0 rgb(0 0 0 / 8%);
+
+        @media (max-width: 1000px) {
+            padding: 5rem 3rem;
+        }
+
+
+        p{
+            font-size: $h4-size;
+            font-weight: 500;
+        }
+    
+        &__name{
+            display: flex;
+    
+            &__profile{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                margin-top: 3rem;
+
+                img{
+                    height: 7rem;
+                    width: 7rem;
+                    border-radius: 50%;
+                }
+
+                h4{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: $p-size;
+                    font-family: $text-font;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
