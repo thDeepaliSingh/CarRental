@@ -1,0 +1,78 @@
+@import './global/color';
+@import './global/typography';
+
+.trip-section{
+    background-color: $bg-white;
+    padding-block: 5.3rem;
+}
+
+.trip-container{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        margin-inline: auto;
+        color: text-black;
+        text-align: center;
+
+        h3{
+            font-size: $h3-size;
+            font-weight: 500;
+            font-family: $text-font;
+        }
+        h2{
+            font-size: $h2-size;
+            font-family: $titles-font;
+            margin:  1.3rem 0 3rem;
+        }
+    }
+
+    &__box-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        padding-inline: 3rem;
+        margin-top: 3.7rem;
+
+
+        @media (min-width: 1010px), (max-width: 1150px) {
+            padding-inline: 1rem;
+        }
+        @media (max-width: 1010px) {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2rem;
+        }
+
+    
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+            margin: 1rem;;
+        }
+
+        &__box{
+            text-align: center;
+            padding: 1rem 6rem;
+
+            @media (max-width: 500px){
+                padding: 1rem 1rem;
+            }
+
+            img{
+                width: 17rem;
+                height: 17rem;
+            }
+
+            h3{
+                font-size: $h3-size;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-size: $p-size;
+                color: $text-gray;
+                font-family: $text-font;
+                line-height: 1.43;
+            }
+        }
+    }
+}

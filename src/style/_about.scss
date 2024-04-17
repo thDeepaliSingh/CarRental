@@ -1,0 +1,110 @@
+@import './global/typography';
+@import './global/boilerplate';
+
+.about-main{
+    max-width: 90rem;
+    display: flex;
+    align-items: center;
+    margin: 10rem auto;
+    gap: 5rem;
+
+    @media (max-width: 960px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 49rem;
+        align-items: center;
+    }
+
+    @media (max-width: 520px) {
+        max-width: 100%;   
+    }
+
+    &__image{
+        height: 43rem;
+        width: 43rem;
+
+        @media (max-width: 960px) {
+            margin-block: 0;
+        }
+        @media (max-width: 520px) {
+            width: 100%;
+            height: auto;
+        }
+
+
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        color: $text-black;
+
+        h3{
+            font-weight: 500;
+            font-size: $h4-size;
+            font-family: $text-font;
+            margin-bottom: 1rem;
+        }
+
+        h2{
+            font-size: $h2-size;
+            line-height: 1.2;
+        }
+
+        p{
+            font-size: $p-size;
+            font-family: $text-font;
+            color: $text-gray;
+            line-height: 1.5;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        &__icons{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            
+            @media (max-width: 520px) {
+                grid-template-columns: 1fr;
+                margin-inline: auto;
+                gap: 0;
+            }
+
+
+            &__box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+               
+                img{
+                    height: 5rem;
+                    max-width: 7rem;
+                    width: auto;
+                }
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                   
+                    h4{
+                        font-size: 4.6rem;
+                        line-height: 1;
+
+                    }
+
+                    @media (max-width: 520px) {
+                        justify-content: center;
+                        flex-direction: column;
+
+                        p{
+                            margin-top: 0;
+                        }
+                      }
+                }
+            }
+        }
+    }
+}
