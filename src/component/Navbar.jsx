@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo/logo.png'
 
 const navbar = () => {
-
+const [state, setState] = useState(false)
   const hamHandler = () =>{
-    document.getElementsByClassName('nav__ham__sticks').classList.toggle('close');
+    setState(!state);
   }
   return (
     <>
@@ -15,34 +15,34 @@ const navbar = () => {
             <img src={Logo} alt="Car Rental" />
           </div>
 
-          <nav className="nav__link">
+          <nav className={`nav__link ${state ? 'close' : ''}`} >
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#"  onClick={() => { window.scrollTo(0, 0); hamHandler(); }}>
                 Home
               </a>
             </div>
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 About
               </a>
             </div>
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Vehical Models
               </a>
             </div>
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Testimonials
               </a>
             </div>
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Our Team
               </a>
             </div>
             <div className="link">
-              <a href="#" onClick={window.scrollTo(0,0)}>
+              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Contact
               </a>
             </div>
@@ -60,9 +60,9 @@ const navbar = () => {
         {/* Hamburgur */}
 
         <div className="nav__ham" onClick={hamHandler}>
-          <div className="nav__ham__sticks"></div>
-          <div className="nav__ham__sticks"></div>
-          <div className="nav__ham__sticks"></div>
+          <div className={`nav__ham__sticks ${state ? 'close' : ''}`}></div>
+          <div className={`nav__ham__sticks ${state ? 'close' : ''}`}></div>
+          <div className={`nav__ham__sticks ${state ? 'close' : ''}`}></div>
         </div>
         
         </div>

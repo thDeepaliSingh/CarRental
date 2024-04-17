@@ -10,7 +10,6 @@
     width: 100%;
     height: auto;
     max-width: 133rem;
-    padding: 2.7rem 2rem;
     margin-inline: auto;
 }
 
@@ -20,12 +19,15 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    
+    padding: 2.7rem 2rem;
     background-color: transparent;
     position: relative;
 
     &__logo{
         width: 14.5rem;
         overflow: hidden;
+        
 
         img{
             height: 100%;
@@ -50,7 +52,37 @@
         }
 
         @media (max-width: 1000px) {
-            display: none;
+            // display: none;
+
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            z-index: 9999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: $h4-size;
+            transition: all .5s ease-in-out;
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            &.close{
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+
+
         }
     }
 
@@ -95,8 +127,8 @@
     
     }
     &__ham{
-        
-        
+        height: 15px;
+        width: 40px;
         flex-direction: column;
         gap: 3px;
         cursor: pointer;
@@ -114,13 +146,21 @@
 
         &__sticks{       
             height: 3px;
+
             width: 40px;
             background-color: $text-black;
             border-radius: 2px;
             transition: all .3s ease-in-out;
         }
-        .close{
-            background-color: palevioletred;
+        .close:first-child{
+            transform: translateY(6px) rotate(45deg);
+        }
+        .close:nth-child(2){
+            transform: scale(0);
+        
+        }
+        .close:last-child{
+            transform: translateY(-6px) rotate(-45deg);
         }
 
     }
