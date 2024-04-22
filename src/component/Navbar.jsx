@@ -17,44 +17,44 @@ const [state, setState] = useState(false)
 
           <nav className={`nav__link ${state ? 'close' : ''}`} >
             <div className="link">
-              <a href="#"  onClick={() => { window.scrollTo(0, 0); hamHandler(); }}>
+              <Link to="/"  onClick={() => { window.scrollTo(0, 0); hamHandler(); }}>
                 Home
-              </a>
+              </Link>
             </div>
             <div className="link">
-              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/about" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 About
-              </a>
+              </Link>
             </div>
             <div className="link">
-              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/models" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Vehical Models
-              </a>
+              </Link>
             </div>
             <div className="link">
-              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/testimonials" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Testimonials
-              </a>
+              </Link>
             </div>
             <div className="link">
-              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/teams" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Our Team
-              </a>
+              </Link>
             </div>
             <div className="link">
-              <a href="#" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/contact" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Contact
-              </a>
+              </Link>
             </div>
           </nav>
 
           <div className="nav__button">
-              <a href="#" className='nav__button__sign-in' onClick={window.scrollTo(0,0)}>
+              <Link to="/" className='nav__button__sign-in' onClick={window.scrollTo(0,0)}>
                 Sign In
-              </a>
-              <a href="#" className='nav__button__register' onClick={window.scrollTo(0,0)}>
+              </Link>
+              <Link to="/" className='nav__button__register' onClick={window.scrollTo(0,0)}>
                 Register
-              </a>
+              </Link>
           </div>
         
         {/* Hamburgur */}

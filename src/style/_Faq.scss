@@ -1,0 +1,100 @@
+@import './global/color';
+@import './global/typography';
+
+
+.faq-section{
+    background-image: url(../assets/faq/car.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 70%;
+    padding-block: 10rem;
+
+}
+
+.faq-content{
+    display: flex;
+    flex-direction: column;
+    color: $text-black;
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        // align-items: center;
+        line-height: 1.5;
+        max-width: 80rem;
+        margin-inline: auto;
+
+        h5{
+            font-size: $h4-size;
+        }
+        h2{
+            font-size: $h2-size;
+            line-height: 1.7;
+        }
+        p{
+            font-size: $p-size;
+            color: $text-gray;
+        }
+
+    }
+}
+
+.all-question{
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 7rem;
+    
+    .faq-box{
+        display: flex;
+         flex-direction: column;
+        color: $text-black;
+        background-color: $bg-white;
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+        width: 80rem;
+        cursor: pointer;
+
+        @media (max-width: 850px) {
+            width: 100%;
+        }
+
+        &__question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 4.5rem;
+            transition: all .15s ease-in-out;
+            box-shadow: 0 3px 6px 0 rgb(0 0 0 / 10%);
+
+            p{
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+
+        }
+
+        &__answer{
+            font-size: $p-size;
+            font-family: $text-font;
+            color: $text-gray;
+            line-height: 1.7;
+            height: 0;
+            overflow: hidden;
+            padding-inline: 4.5rem;
+            transition: all .4s ease-in-out;
+        }
+
+        .active-answer{
+            padding-block: 2.8rem;
+            height: fit-content;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .active-question{
+            background-color: $text-orange;
+            color: white;
+            box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+        }
+    }
+}
