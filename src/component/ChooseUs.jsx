@@ -3,6 +3,7 @@ import Bg from '../assets/chooseUs/main.png'
 import Icon1 from '../assets/chooseUs/icon1.png'
 import Icon2 from '../assets/chooseUs/icon2.png'
 import Icon3 from '../assets/chooseUs/icon3.png'
+import { Link } from 'react-router-dom'
 
 const ChooseUs = () => {
 
@@ -36,7 +37,7 @@ const ChooseUs = () => {
                             <h2>Best valued deals you will ever find</h2>
                             <p>Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to providing you with the best value for your money, so you can enjoy top-quality services and products without breaking the bank. Our deals are designed to give you the ultimate renting experience, so don't miss out on your chance to save big.</p>
 
-                            <a href="#home">Find Details</a>
+                            <Link to="/" onClick={() => window.scrollTo(0, 0)}>Find Details</Link>
                         </div>
 
                         <div className="choose-container__text__right">

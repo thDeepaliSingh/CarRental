@@ -1,6 +1,7 @@
 import React from 'react'
 import Img1 from '../assets/download/appstore.svg'
 import Img2 from '../assets/download/googleapp.svg'
+import { Link } from 'react-router-dom'
 
 const Download = () => {
   return (
@@ -14,12 +15,12 @@ const Download = () => {
                     </p>
 
                     <div className="download-text__btn">
-                        <a href="#">
+                        <Link to="/" onClick={ () => window.scrollTo(0, 0)}>
                             <img src={Img1} alt="App Store" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/" onClick={ () => window.scrollTo(0, 0)}>
                             <img src={Img2} alt="Play Store" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

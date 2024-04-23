@@ -1,10 +1,13 @@
 import React from 'react'
 import HeroPage from '../component/HeroPage'
 import Bookbanner from '../component/Bookbanner'
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 const Contact = () => {
   return (
     <>
+          <Navbar />
       <section className='contact-page'>
         <HeroPage name = "Contact"/>
         <div className="container">
@@ -41,6 +44,7 @@ const Contact = () => {
           </div>
         </div>
         <Bookbanner />
+                      <Footer/>
       </section>
     </>
   )

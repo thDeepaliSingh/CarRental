@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeroPage = ({name}) => {
   return (
@@ -7,7 +8,7 @@ const HeroPage = ({name}) => {
         <div className="container">
             <div className="hero-page__text">
                 <h3>{name}</h3>
-                <p><a href="#">Home</a> / {name}</p>
+                <p><Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link> / {name}</p>
             </div>
         </div>
     </section>

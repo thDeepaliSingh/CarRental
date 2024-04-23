@@ -1,6 +1,7 @@
 import React from 'react'
 import heroesbg from '../assets/hero/hero-bg.png'
 import maincar from '../assets/hero/main-car.png'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -13,8 +14,8 @@ const Hero = () => {
                     <h1>Save <span className="orange-text">big</span> with our car rental</h1>
                     <p>Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.</p>
                     <div className="hero-contant__text__btn">
-                        <a href='/' className="hero-contant__text__btn__book-ride">Book Ride</a>
-                        <a href='/' className="hero-contant__text__btn__learn-more">Learn More</a>
+                        <Link to='/' className="hero-contant__text__btn__book-ride">Book Ride</Link>
+                        <Link to='/about' className="hero-contant__text__btn__learn-more">Learn More</Link>
                     </div>
                 </div>
                 <img src={maincar} alt="main car" className='hero-contant__main-car'/>

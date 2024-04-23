@@ -7,6 +7,8 @@ import Image3 from '../assets/team/3.png'
 import Image4 from '../assets/team/4.png'
 import Image5 from '../assets/team/5.png'
 import Image6 from '../assets/team/6.png'
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 const OurTeam = () => {
 
@@ -20,6 +22,7 @@ const OurTeam = () => {
   ]
   return (
     <>
+          <Navbar />
       <section className="team-page">
         <HeroPage name = "Our Team"/>
         <div className="container">
@@ -41,6 +44,7 @@ const OurTeam = () => {
         </div>
 
         <Bookbanner />
+              <Footer/>
       </section>
     </>
     

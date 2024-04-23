@@ -7,9 +7,12 @@ import Car3 from "../assets/cars-big/toyota-box.png";
 import Car4 from "../assets/cars-big/bmw-box.png";
 import Car5 from "../assets/cars-big/benz-box.png";
 import Car6 from "../assets/cars-big/passat-box.png";
+import { Link } from 'react-router-dom';
 // import { TbCar , TbPhoneCall, IconStar} from "react-icons/tb";
 
+import Navbar from '../component/Navbar'
 
+import Footer from '../component/Footer'
 
 const Vehical = () => {
   const item = [
@@ -22,6 +25,7 @@ const Vehical = () => {
   ]
   return (
     <>
+          <Navbar />
       <section className="model-page">
         <HeroPage name = "Vehical Model"/>
           <div className="container">
@@ -65,7 +69,7 @@ const Vehical = () => {
                             </span>
                           </div>
                           <div className="model-container__box__desc__name-price__btn">
-                            <a onClick={window.scrollTo(0 , 0)} href="/">Book Ride</a>
+                            <Link onClick={window.scrollTo(0 , 0)} to="/">Book Ride</Link>
                           </div>
                         
                       </div>
@@ -77,6 +81,7 @@ const Vehical = () => {
             </div>
           </div>
         <Bookbanner />
+                      <Footer/>
       </section>
     </>
     

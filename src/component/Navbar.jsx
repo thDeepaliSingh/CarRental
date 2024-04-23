@@ -37,7 +37,7 @@ const [state, setState] = useState(false)
               </Link>
             </div>
             <div className="link">
-              <Link to="/teams" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
+              <Link to="/team" onClick={ () =>{window.scrollTo(0,0); hamHandler(); }}>
                 Our Team
               </Link>
             </div>

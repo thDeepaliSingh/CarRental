@@ -6,7 +6,8 @@ import Main from '../assets/about/about-main.jpg'
 import Icon1 from '../assets/about/icon1.png'
 import Icon2 from '../assets/about/icon2.png'
 import Icon3 from '../assets/about/icon3.png'
-
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 
 
@@ -31,6 +32,7 @@ const About = () => {
   ]
   return (
     <>
+          <Navbar />
       <section className="about-page">
 
         <HeroPage name = "About"/>
@@ -63,6 +65,7 @@ const About = () => {
 
         <PlanTrip />
         <Bookbanner />
+                      <Footer/>
       </section>
     </>
   )
