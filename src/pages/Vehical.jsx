@@ -16,12 +16,12 @@ import Footer from '../component/Footer'
 
 const Vehical = () => {
   const item = [
-    {img: Car1, company: 'Audi', Model: 'Audi A1', rating: '5', price: '$45', pt:'Diesel'},
-    {img: Car2, company: 'VW', Model: 'Golf 6', rating: '4', price: '$37', pt:'Diesel'},
-    {img: Car3, company: 'Camry', Model: 'Toyota', rating: '5', price: '$30', pt:'Diesel'},
-    {img: Car4, company: 'Modern Line', Model: 'BMW 320', rating: '4', price: '$20', pt:'Diesel'},
-    {img: Car5, company: 'Benz GLK', Model: 'Mercedes', rating: '4', price: '$55', pt:'Diesel'},
-    {img: Car6, company: 'CC', Model: 'VW Passat', rating: '4.5', price: '$30', pt:'Diesel'}
+    {img: Car1, company: 'Audi', Model: 'Audi A1', rating: '5', price: '$45', pt:'Gasoline', transportation: 'Manual'},
+    {img: Car2, company: 'VW', Model: 'Golf 6', rating: '4', price: '$37', pt:'Diesel', transportation: 'Manual'},
+    {img: Car3, company: 'Camry', Model: 'Toyota', rating: '5', price: '$30', pt:'Hybrid', transportation: 'Automatic'},
+    {img: Car4, company: 'Modern Line', Model: 'BMW 320', rating: '4', price: '$20', pt:'Diesel', transportation: 'Manual'},
+    {img: Car5, company: 'Benz GLK', Model: 'Mercedes', rating: '4', price: '$55', pt:'Diesel', transportation: 'Manual'},
+    {img: Car6, company: 'CC', Model: 'VW Passat', rating: '4.5', price: '$30', pt:'Gasoline', transportation: 'Automatic'}
   ]
   return (
     <>
@@ -62,7 +62,7 @@ const Vehical = () => {
                               {item.rating}/5 &nbsp; p
                             </span>
                             <span>
-                              p &nbsp; Manual
+                              p &nbsp; {item.transportation}
                             </span>
                             <span style={{ textAlign: "right" }}>
                             {item.pt} &nbsp; p

@@ -7,7 +7,7 @@ import Download from '../component/Download'
 import ChooseUs from '../component/ChooseUs'
 import Faq from '../component/faq'
 import BookCar from '../component/BookCar'
-import CarModel from '../component/CarModel'
+import PickCar from '../component/PickCar'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 
@@ -18,13 +18,13 @@ const Home = () => {
       <Hero />         
       <BookCar />
       <PlanTrip />
-      <CarModel />
+      <PickCar /> 
       <Banner />
       <ChooseUs />
       <Testimonial />
       <Faq />
       <Download />
-                    <Footer/>
+      <Footer/>
     </>
   )
 }
