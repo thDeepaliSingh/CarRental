@@ -9,9 +9,11 @@ This React application, built with Vite and deployed on Vercel, streamlines the 
 https://car-rental-mu-beryl.vercel.app/
 
 
+
 ## Screenshots
 
-![App Screenshot](file:///C:/Users/ASUS/Downloads/Screenshot_26-4-2024_203657_car-rental-mu-beryl.vercel.app.jpeg)
+![App Screenshot](https://raw.githubusercontent.com/thDeepaliSingh/images/main/Screenshot_26-4-2024_203657_car-rental-mu-beryl.vercel.app.jpeg)
+
 
 ## Features
 
